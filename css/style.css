@@ -1,0 +1,150 @@
+body {
+    background-image: url(../img/pannkaka2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.gridwrapper {
+    display: grid;
+    
+    height: 97vh;
+    width: 99vw; 
+    grid-template-areas:
+        "He He He "
+        "S1 S2 Na"
+        "S1 S2 Na"
+        "S1 S2 Na"
+        "S1 S2 Na"
+        "Fo Fo Fo"
+
+     ;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 5px;
+}
+.gridwrapper2 {
+    display: grid;
+    
+    height: 97vh;
+    width: 99vw; 
+    grid-template-areas:
+        "He He He "
+        "S3 S3 Na"
+        "S3 S3 Na"
+        "S3 S3 Na"
+        "S3 S3 Na"
+        "Fo Fo Fo"
+
+     ;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 5px;
+}
+
+.header {
+    grid-area: He;
+    background: rgb(238, 197, 238);
+    flex: 1;
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    align-content: center;
+}
+.section1 {
+    grid-area: S1;
+    background: rgb(252, 252, 230);
+    flex: 1;
+    display: flex;
+    flex-direction:column;
+    border-radius: 20px;
+    justify-content: center;
+    align-content: center;
+}
+.section2 {
+    grid-area: S2;
+    background: rgb(252, 252, 230);
+    flex: 1;
+    display: flex;
+    flex-direction:column;
+    border-radius: 20px;
+    justify-content: center;
+    align-content: center;
+}
+.section3 {
+    grid-area: S3;
+    background: rgb(252, 252, 230);
+    flex: 1;
+    display: flex;
+    flex-direction:column;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.section3 ul {
+    width: 150px;
+    list-style: none;
+}
+.nav {
+    grid-area: Na;
+    background: rgb(195, 231, 231);
+    display: flex;
+    border-radius: 20px;
+    flex-direction: row;
+}
+.footer {
+    grid-area: Fo;
+    background:rgb(255, 221, 227);
+    flex: 1;
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    align-content: center;
+}
+nav a {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+}
+h1 {
+    font-family: sans-serif;
+    font-size: 50px;
+    margin: auto;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+ }
+h4 {
+    font-family: sans-serif;
+    font-size: 30px;
+    margin: 5px;
+    color: black;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+h5 {
+    font-family: sans-serif;
+    font-size: 15px;
+    margin: 50px;
+}
+h6 {
+    font-family: sans-serif;
+    font-size: 15px;
+    margin: 50px;
+    color:black;
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    align-content: center;
+ }
+ul {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
