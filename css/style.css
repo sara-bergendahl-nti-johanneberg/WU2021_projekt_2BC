@@ -8,19 +8,20 @@ body {
 .gridwrapper {
     display: grid;
     
-    height: 97vh;
+    height: 89vh;
     width: 99vw; 
     grid-template-areas:
-        "He He He "
-        "S1 S2 Na"
-        "S1 S2 Na"
-        "S1 S2 Na"
-        "S1 S2 Na"
-        "Fo Fo Fo"
+        "He He"
+        "S1 S1"
+        "S1 S1"
+        "S1 S1"
+        "S2 S2"
+        "S2 S2"
+        "S2 S2"
 
      ;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     grid-gap: 5px;
 }
 .gridwrapper2 {
@@ -44,30 +45,27 @@ body {
 
 .header {
     grid-area: He;
-    background: rgb(238, 197, 238);
+    background: purple;
     flex: 1;
     display: flex;
-    border-radius: 20px;
     justify-content: center;
     align-content: center;
 }
 .section1 {
     grid-area: S1;
-    background: rgb(252, 252, 230);
+    background: red;
     flex: 1;
     display: flex;
     flex-direction:column;
-    border-radius: 20px;
     justify-content: center;
     align-content: center;
 }
 .section2 {
     grid-area: S2;
-    background: rgb(252, 252, 230);
+    background: blue;
     flex: 1;
     display: flex;
     flex-direction:column;
-    border-radius: 20px;
     justify-content: center;
     align-content: center;
 }
@@ -85,14 +83,25 @@ body {
     width: 150px;
     list-style: none;
 }
-.nav {
+/* .nav { 
     grid-area: Na;
     background: rgb(195, 231, 231);
     display: flex;
     border-radius: 20px;
     flex-direction: row;
+} */
+nav { 
+    height: 100vh;
+    width: 80vw;
+    background: hotpink;
+    position: fixed;
+    top: 0;
+    left: -90vw;
+    transition: left 0.3s;
+    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+    z-index: 10;
 }
-.footer {
+/*.footer {
     grid-area: Fo;
     background:rgb(255, 221, 227);
     flex: 1;
@@ -101,6 +110,7 @@ body {
     justify-content: center;
     align-content: center;
 }
+*/
 nav a {
     flex: 1;
     display: flex;
@@ -147,4 +157,47 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+body,ul{
+    margin: 0;
+}
+
+.menu{
+    height: 100vh;
+    width: 80vw;
+    background: hotpink;
+    position: fixed;
+    top: 0;
+    left: -90vw;
+    transition: left 0.3s;
+    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+    z-index: 10;
+}
+
+.menu-button{
+    cursor: pointer;
+    display: inline;
+}
+
+.menu-button i.material-icons{
+    font-size: 2.5rem;
+}
+
+.show{
+    left: 0;
+}
+
+.fade-layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 5;
+}
+
+.fade-layer.visible{
+    display: block;
 }
