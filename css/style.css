@@ -8,21 +8,22 @@ body {
 .gridwrapper {
     display: grid;
     
-    height: 89vh;
+    height: 97vh;
     width: 99vw; 
     grid-template-areas:
-        "He He"
-        "S1 S1"
-        "S1 S1"
-        "S1 S1"
-        "S2 S2"
-        "S2 S2"
-        "S2 S2"
+        "He He He He He"
+        "S1 S1 S2 S2 Na"
+        "S1 S1 S2 S2 Na"
+        "S1 S1 S2 S2 Na"
+        "S1 S1 S2 S2 Na"
+        "S1 S1 S2 S2 Na"
+        "S1 S1 S2 S2 Na"
+        "Fo Fo Fo Fo Fo"
 
      ;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    grid-gap: 5px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 30px;
 }
 .gridwrapper2 {
     display: grid;
@@ -30,17 +31,19 @@ body {
     height: 97vh;
     width: 99vw; 
     grid-template-areas:
-        "He He He "
-        "S3 S3 Na"
-        "S3 S3 Na"
-        "S3 S3 Na"
-        "S3 S3 Na"
-        "Fo Fo Fo"
+        "He He He He He"
+        "S3 S3 S3 S3 Na"
+        "S3 S3 S3 S3 Na"
+        "S3 S3 S3 S3 Na"
+        "S3 S3 S3 S3 Na"
+        "S3 S3 S3 S3 Na"
+        "S3 S3 S3 S3 Na"
+        "Fo Fo Fo Fo Fo"
 
      ;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-gap: 5px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 30px
 }
 
 .header {
@@ -48,12 +51,13 @@ body {
     background: purple;
     flex: 1;
     display: flex;
+
     justify-content: center;
     align-content: center;
 }
 .section1 {
     grid-area: S1;
-    background: red;
+    background: turquoise;
     flex: 1;
     display: flex;
     flex-direction:column;
@@ -62,7 +66,7 @@ body {
 }
 .section2 {
     grid-area: S2;
-    background: blue;
+    background: crimson;
     flex: 1;
     display: flex;
     flex-direction:column;
@@ -71,11 +75,10 @@ body {
 }
 .section3 {
     grid-area: S3;
-    background: rgb(252, 252, 230);
+    background: blue;
     flex: 1;
     display: flex;
     flex-direction:column;
-    border-radius: 20px;
     justify-content: center;
     align-items: center;
 }
@@ -83,34 +86,20 @@ body {
     width: 150px;
     list-style: none;
 }
-/* .nav { 
+.nav {
     grid-area: Na;
-    background: rgb(195, 231, 231);
+    background: yellow;
     display: flex;
-    border-radius: 20px;
     flex-direction: row;
-} */
-nav { 
-    height: 100vh;
-    width: 80vw;
-    background: hotpink;
-    position: fixed;
-    top: 0;
-    left: -90vw;
-    transition: left 0.3s;
-    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
-    z-index: 10;
 }
-/*.footer {
+.footer {
     grid-area: Fo;
-    background:rgb(255, 221, 227);
+    background: green;
     flex: 1;
     display: flex;
-    border-radius: 20px;
     justify-content: center;
     align-content: center;
 }
-*/
 nav a {
     flex: 1;
     display: flex;
@@ -158,46 +147,48 @@ ul {
     flex-direction: column;
     justify-content: space-between;
 }
-body,ul{
-    margin: 0;
+
+/* Mobil grej kopierat från presentationen, fattar inte riktigt */
+
+@media screen and (min-width: 768px) and (max-width: 1023px {
+    main {
+        background-color: salmon;
+    }
 }
 
-.menu{
-    height: 100vh;
-    width: 80vw;
-    background: hotpink;
-    position: fixed;
-    top: 0;
-    left: -90vw;
-    transition: left 0.3s;
-    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
-    z-index: 10;
+@media screen and (min-width: 1023px) {
+    main {
+        background-color: aqua;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-rows: 10vh 80vh 10vh;
+    }
+
+    nav {
+        display: none;
+    }
+
+    header, footer {
+        display: block;
+        background-color: tomato;
+    }
+
+    .menu-button {
+        display: none;
+    }
 }
 
-.menu-button{
-    cursor: pointer;
-    display: inline;
-}
 
-.menu-button i.material-icons{
-    font-size: 2.5rem;
-}
 
-.show{
-    left: 0;
-}
 
-.fade-layer{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5);
-    display: none;
-    z-index: 5;
-}
 
-.fade-layer.visible{
-    display: block;
-}
+.auto-grid {
+    --auto-grid-min-size: 16rem;
+  
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    grid-gap: 1rem;
+  }
+
