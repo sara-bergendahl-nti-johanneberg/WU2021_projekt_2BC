@@ -5,47 +5,6 @@ body {
 
 }
 
-.gridwrapper {
-    display: grid;
-    
-    height: 97vh;
-    width: 99vw; 
-    grid-template-areas:
-        "He He He He He"
-        "S1 S1 S2 S2 Na"
-        "S1 S1 S2 S2 Na"
-        "S1 S1 S2 S2 Na"
-        "S1 S1 S2 S2 Na"
-        "S1 S1 S2 S2 Na"
-        "S1 S1 S2 S2 Na"
-        "Fo Fo Fo Fo Fo"
-
-     ;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    grid-gap: 30px;
-}
-.gridwrapper2 {
-    display: grid;
-    
-    height: 97vh;
-    width: 99vw; 
-    grid-template-areas:
-        "He He He He He"
-        "S3 S3 S3 S3 Na"
-        "S3 S3 S3 S3 Na"
-        "S3 S3 S3 S3 Na"
-        "S3 S3 S3 S3 Na"
-        "S3 S3 S3 S3 Na"
-        "S3 S3 S3 S3 Na"
-        "Fo Fo Fo Fo Fo"
-
-     ;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    grid-gap: 30px
-}
-
 .header {
     grid-area: He;
     background: purple;
@@ -149,35 +108,105 @@ ul {
 }
 
 /* Mobil grej kopierat från presentationen, fattar inte riktigt */
+/* endast för mobil */
+@media screen and (max-width: 600px) {
+    body {
+       
+    }
 
-@media screen and (min-width: 768px) and (max-width: 1023px {
-    main {
-        background-color: salmon;
+    .gridwrapper {
+        display: grid;
+        
+        height: 97vh;
+        width: 99vw; 
+        grid-template-areas:
+            "He He He"
+            "S1 S1 S1"
+            "S1 S1 S1"
+            "S1 S1 S1"
+            "S1 S1 S1"
+            "S2 S2 S2"
+            "S2 S2 S2"
+            "S2 S2 S2"
+            "S2 S2 S2"
+    
+         ;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        grid-gap: 10px;
+    }
+    .gridwrapper2 {
+        display: grid;
+        
+        height: 97vh;
+        width: 99vw; 
+        grid-template-areas:
+        "He He He"
+        "S1 S1 S1"
+        "S1 S1 S1"
+        "S1 S1 S1"
+        "S1 S1 S1"
+        "S1 S1 S1"
+        "S1 S1 S1"
+        "S1 S1 S1"
+        "S1 S1 S1"
+    
+         ;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        grid-gap: 10px
+    }
+    .nav {
+        display: none;
+    }
+    .footer{
+        display: none;
     }
 }
-
-@media screen and (min-width: 1023px) {
-    main {
-        background-color: aqua;
-    }
-
-    .wrapper {
+/* Endast för desktop */
+@media screen and (min-width: 601px) {
+    
+    .gridwrapper {
         display: grid;
-        grid-template-rows: 10vh 80vh 10vh;
+        
+        height: 97vh;
+        width: 99vw; 
+        grid-template-areas:
+            "He He He He He"
+            "S1 S1 S2 S2 Na"
+            "S1 S1 S2 S2 Na"
+            "S1 S1 S2 S2 Na"
+            "S1 S1 S2 S2 Na"
+            "S1 S1 S2 S2 Na"
+            "S1 S1 S2 S2 Na"
+            "Fo Fo Fo Fo Fo"
+    
+         ;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-gap: 30px;
     }
-
-    nav {
-        display: none;
+    .gridwrapper2 {
+        display: grid;
+        
+        height: 97vh;
+        width: 99vw; 
+        grid-template-areas:
+            "He He He He He"
+            "S3 S3 S3 S3 Na"
+            "S3 S3 S3 S3 Na"
+            "S3 S3 S3 S3 Na"
+            "S3 S3 S3 S3 Na"
+            "S3 S3 S3 S3 Na"
+            "S3 S3 S3 S3 Na"
+            "Fo Fo Fo Fo Fo"
+    
+         ;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-gap: 30px
     }
-
-    header, footer {
-        display: block;
-        background-color: tomato;
-    }
-
-    .menu-button {
-        display: none;
-    }
+    
 }
 
 
