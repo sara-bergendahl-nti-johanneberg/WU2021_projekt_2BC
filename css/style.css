@@ -1,3 +1,5 @@
+/* Kom ihåg att minify */
+
 body {
     background-image: url(../img/pannkaka2.jpg);
     background-repeat: no-repeat;
@@ -7,7 +9,7 @@ body {
 
 .header {
     grid-area: He;
-    background: purple;
+    background: #8785ED;
     flex: 1;
     display: flex;
 
@@ -16,7 +18,7 @@ body {
 }
 .section1 {
     grid-area: S1;
-    background: turquoise;
+    background: #Ba88e0;
     flex: 1;
     display: flex;
     flex-direction:column;
@@ -25,7 +27,7 @@ body {
 }
 .section2 {
     grid-area: S2;
-    background: crimson;
+    background: #E68BF7;
     flex: 1;
     display: flex;
     flex-direction:column;
@@ -34,7 +36,7 @@ body {
 }
 .section3 {
     grid-area: S3;
-    background: blue;
+    background: #ed7ea3;
     flex: 1;
     display: flex;
     flex-direction:column;
@@ -47,13 +49,15 @@ body {
 }
 .nav {
     grid-area: Na;
-    background: yellow;
+    background: #ed85d8;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 .footer {
     grid-area: Fo;
-    background: green;
+    background: #ab8bf7;
     flex: 1;
     display: flex;
     justify-content: center;
@@ -63,7 +67,7 @@ nav a {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     margin: auto;
 }
 h1 {
@@ -141,16 +145,16 @@ ul {
         height: 97vh;
         width: 99vw; 
         grid-template-areas:
-        "He He He"
-        "S1 S1 S1"
-        "S1 S1 S1"
-        "S1 S1 S1"
-        "S1 S1 S1"
-        "S1 S1 S1"
-        "S1 S1 S1"
-        "S1 S1 S1"
-        "S1 S1 S1"
-    
+            "He He He"
+            "S3 S3 S3"
+            "S3 S3 S3"
+            "S3 S3 S3"
+            "S3 S3 S3"
+            "S3 S3 S3"
+            "S3 S3 S3"
+            "S3 S3 S3"
+            "S3 S3 S3"
+
          ;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(9, 1fr);
